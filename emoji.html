@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMOJI</title>
+  <style>
+      body{
+          background-color: rgb(208, 247, 243);
+      }
+      .p{
+          height:500px;
+          width:100%;
+          font-size:300px;
+          /* border: 2px solid black; */
+          display:flex;
+          justify-content: center;
+          align-items: center;
+      }
+      #btn{
+          height: 70px;
+          width: 140px;
+          font-size: 25px;
+          border-radius: 7px ;
+
+      }
+      #btn:hover{
+          background-color: black;
+          color: white;
+          cursor: pointer;
+      }
+      .k{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          margin:30px;
+
+
+      }
+      .em{
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          font-size:200%;
+          /* border:2px solid red; */
+          /* height: 1.1em; */
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          width:100%;
+
+
+      }
+      
+      </style>
+  </head>
+  <body>
+      <div class="em">
+      <b>EMOJI FLIPPER</b>
+      </div>
+      <div class="p">
+        &#128567;
+      </div>
+      <div class="k">
+      <button id="btn" onclick="col()">
+          Click Me
+      </button></div>
+      <script>
+          arr=[1,2,3,4,5,6,7,8,9]
+  
+          function col(){
+   
+   let hex1="&#1285"
+   for(var i=0; i<2; i++){
+       const num1=Math.floor((Math.random() * arr.length));
+       hex1+=arr[num1];
+       
+   }
+//    document.body.style.backgroundColor=hex1;
+   document.querySelector(".p").innerHTML =hex1;
+   
+       
+   }
+
+
+      </script>
+  </body>
+  
+  </html>
